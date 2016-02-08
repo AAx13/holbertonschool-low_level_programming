@@ -1,9 +1,12 @@
 #include "my_functions.h"
 
-void print_alphabet(void)
+void print_tebahplay(void)
 {
   char c;
-  
-  for (c='a'; c<='z';c++)
+
+  for (c='z';c>='a';c--)
     print_char(c);
 }
+
+
+
