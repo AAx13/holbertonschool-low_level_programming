@@ -1,6 +1,6 @@
 #include "my_functions.h"
 
-void print_base16(void)
+void print_base16(void) /* This function prints the numbers of base 16, from 0-F */
 {
   char c;
 
