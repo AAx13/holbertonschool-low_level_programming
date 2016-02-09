@@ -11,5 +11,4 @@ void positive_or_not(int n)
   }   else  {
     print_char('N');
   }
-
 }
