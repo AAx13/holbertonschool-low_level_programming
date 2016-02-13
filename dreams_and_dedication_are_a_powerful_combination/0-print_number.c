@@ -2,43 +2,37 @@
 
 void print_number(int n){
 
-
-
-  int ncopy;
-  int print;
-  int split;
+ int ncopy=n;
+ int count=1;
+ int split=1;
  
-  if (n < 0)
-   {
-     (n = n*-1);
+  while (ncopy > 9){
+    ncopy=ncopy/10;
+    split=split*10;
+    count++;
    }
 
-  else
-  
-  if (n==0)
-  {
-  print_char(n+48);
-  }
-  else
+  for (ncopy=n/split;ncopy>9;split=split/10){
+    ncopy=ncopy/split;
+    print_char('n');
+   }
 
+  while (ncopy == 0){
+    print_char('0');
+   }
 
-    {
-	
-      
-  for (split = 1, ncopy = n ; ncopy>10 ; ncopy=ncopy/10, split = split*10)
-  {
-  }
-
-
-  for (print = n/split ; print > 0 ; split = split / 10 , n = n - split * print )
-  {
-  print_char(print);
-
-  }
-
- }
-
-  
 }
+
+
+
+
+
+
+
+
+
+
+  
+
     
   
