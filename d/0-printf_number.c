@@ -2,17 +2,20 @@
 
 void printf_number(int n){
 
-  int ncopy;
+  int i=n;
+
+  printf("%d", i);
+}
   
 
-  if(n >= 0)
-    scanf(n);
- }
+ 
+ 
+ 
 
-  if(n < 0){
-    ncopy = n * -1;
-    scanf(ncopy);
- }
+ 
+ 
+ 
+ 
   
 
 
