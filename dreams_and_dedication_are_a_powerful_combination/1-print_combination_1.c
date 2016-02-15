@@ -6,13 +6,13 @@ void print_combination_1(void){
   int n = 9;
 
   for(i = 0;i < n; i++){
-    print_char(i + '0');
+    print_number(i);
     print_char(',');
     print_char(' ');
   }
 
   if(i == n){
-    print_char(i + '0');
+    print_number(i);
   }
   
 }
