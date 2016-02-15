@@ -20,3 +20,5 @@ void print_combination_2(void){
     }
   }
 }
+
+/* This function prints a combination of numbers excluding numbers that are doubles and numbers where the first digit is higher than the second digit using a nested for loop */
