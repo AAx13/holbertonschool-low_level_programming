@@ -9,15 +9,13 @@ void print_number(int n){
 
  if (n < 0){
    n = n * -1;
-   print_char('-');
- }
+   print_char('-'); }
 
  ncopy = n;
 
  while (ncopy > 9){
     ncopy=(ncopy / 10);
-    power= power * 10;
-   }
+    power= power * 10; }
 
  power = power / 10;
  ncopy = n;
@@ -26,14 +24,10 @@ void print_number(int n){
     print= ncopy / power;
     ncopy= ncopy % power;
     power= power / 10;
-    print_char(print + '0');
-  }
+    print_char(print + '0'); }
 
   if (n == 0){
-    print_char('0');
-    }
-
-}
+    print_char('0'); }}
 
 
 /* This function takes a given number and prints it */
