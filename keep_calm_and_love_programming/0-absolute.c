@@ -7,6 +7,7 @@ int absolute(int n){
   }
 }
 
+/* this function returns the absolute value of a given integer */
 
 
 

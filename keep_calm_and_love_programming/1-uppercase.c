@@ -6,3 +6,6 @@ if (c <= 'z' && c >= 'a'){
   return(c);
  }
 }
+
+
+/* this function changes the lower case characters to uppercase */

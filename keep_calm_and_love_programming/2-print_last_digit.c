@@ -10,7 +10,9 @@ void print_last_digit(int n){
 
   print_char(n + '0');
 }
-    
+
+/* this function prints the last digit of a given number */
+
 
       
     
