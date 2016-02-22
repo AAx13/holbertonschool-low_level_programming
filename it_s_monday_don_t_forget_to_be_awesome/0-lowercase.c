@@ -1,6 +1,9 @@
+char lowercase(char c){
 
-char lowercase(char c)
-
-  if(c > 'z'){
+  if(c <= 'Z' && c >= 'A'){
     return(c + 32);
+  } else {
+    return(c);
   }
+}
+
