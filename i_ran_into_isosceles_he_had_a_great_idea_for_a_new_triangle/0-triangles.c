@@ -1,4 +1,4 @@
-int print_char(char c);
+#include <stdio.h>
 
 void triangles_in_the_term(int h, int n){
   
@@ -10,12 +10,12 @@ void triangles_in_the_term(int h, int n){
   for(ncopy = 1; ncopy <= n ; ncopy++){
     for(height = 1 ; height <= h ; height++){
       for(space = h - height ; space >= 1 ; space--){
-	print_char(' ');
+	printf(" ");
       }
       for(star = 1 ; star <= height * 2 -1 ; star++){
-	print_char('*');
+	printf("*");
     }
-      print_char('\n');
+      printf("\n");
     }
   }
   
