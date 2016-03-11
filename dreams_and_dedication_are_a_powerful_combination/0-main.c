@@ -1,4 +1,5 @@
 #include "my_functions.h"
+#include <limits.h>
 
 int main(void)
 {
