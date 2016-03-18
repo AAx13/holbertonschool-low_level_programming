@@ -1,10 +1,13 @@
 char *string_ncopy(char *dest, const char *src, int n){
 
-int i, j;
+int i;
 
-for(i = 0, j = 0; src[j] !='\0' && j == n; i++, j++){
-  dest[i] = src[j];
-}
-  dest[i] = '\0';
-  return dest;
+    for(i = 0; src[i] != '\0' && i < n; i++){
+        dest[i] = src[i];
+      }
+      while(i < n){
+        dest[i] = '\0';
+        i++;
+      }
+    return dest;
 }
