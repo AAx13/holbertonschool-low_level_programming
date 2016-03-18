@@ -7,3 +7,5 @@ char *string_copy(char *dest, const char *src){
   }
   return dest;
 }
+
+/* This function copies a string */

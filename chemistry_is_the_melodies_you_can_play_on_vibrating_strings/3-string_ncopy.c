@@ -11,3 +11,5 @@ int i;
       }
     return dest;
 }
+
+/* this function copies a string */

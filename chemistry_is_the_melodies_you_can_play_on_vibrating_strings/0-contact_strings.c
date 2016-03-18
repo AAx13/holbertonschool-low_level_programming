@@ -1,6 +1,6 @@
 char *concat_strings(char *dest, const char *src){
 
-  int i, j;          
+  int i, j;
   int count = 0;
 
     for(i = 0; dest[i] != '\0'; i++){
@@ -13,3 +13,5 @@ char *concat_strings(char *dest, const char *src){
     return dest;
 
 }
+
+/* this function concatenates two strings */
