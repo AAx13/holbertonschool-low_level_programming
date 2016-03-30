@@ -9,7 +9,6 @@ int factorial(int n){
   }
 
   return n * factorial(n - 1);
-
 }
 
 /* this function returns the factoral of a given number by use of recursion */
