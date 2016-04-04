@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(int argc, char **argv){
+int main(int argc, char **argv){ /* this program will print each and every argument */
 
   int i;
 
