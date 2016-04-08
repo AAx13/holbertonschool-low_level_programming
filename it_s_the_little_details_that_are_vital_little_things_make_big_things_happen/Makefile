@@ -9,13 +9,13 @@ DEPS = inc/holbertonschool.h
 all: $(ARCHIVE) re
 
 $(ARCHIVE): $(OBJ)
-				ar -rc $(ARCHIVE) $(OBJ)
-				ranlib $(ARCHIVE)
+	ar -rc $(ARCHIVE) $(OBJ)
+	ranlib $(ARCHIVE)
 
 %.o : src/%.c $(DEPS)
-				$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@
 
 re: clean
 
 clean:
-				rm -f $(OBJ)
+	rm -f $(OBJ)
