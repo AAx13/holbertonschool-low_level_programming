@@ -16,5 +16,9 @@ char *string_dup(char *str){      /* this program will iterate through a string 
 
   str = malloc(i);
 
+  if(str == NULL){
+    return 1;
+  }
+
   return str;
 }
