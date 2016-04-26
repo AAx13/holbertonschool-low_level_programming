@@ -6,10 +6,10 @@ int main(void)
 {
    char c;
 
-   c = odd(1);
+   c = odd(25);
    print_char(c);
 
-   c = odd(2);
+   c = odd(30);
    print_char(c);
 
    c = odd(0);
