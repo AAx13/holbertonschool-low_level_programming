@@ -1,12 +1,12 @@
 #include <stdio.h>
-int string_lower(char *s);
+int string_upper(char *s);
 
 int main()
 {
-  char s[] = "sssssss";
+  char s[] = "";
   int x;
 
-  x = string_lower(s);
+  x = string_upper(s);
   printf("%d\n", x);
 
   return 0;
