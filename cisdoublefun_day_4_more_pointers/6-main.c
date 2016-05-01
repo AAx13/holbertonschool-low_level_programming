@@ -1,12 +1,12 @@
 #include <stdio.h>
-char *uppercase_string(char *);
+char *lowercase_string(char *str);
 
 int main(void)
 {
    char s[] = "Holberton School!\n";
    char *p;
 
-   p = uppercase_string(s);
+   p = lowercase_string(s);
    printf("%s", p);
    printf("%s", s);
    return (0);
