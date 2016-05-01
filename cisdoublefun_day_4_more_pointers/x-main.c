@@ -1,12 +1,12 @@
 #include <stdio.h>
-int string_digit(char *s);
+int string_lower(char *s);
 
 int main()
 {
-  char s[] = "12   1  ";
+  char s[] = "sssssss";
   int x;
 
-  x = string_digit(s);
+  x = string_lower(s);
   printf("%d\n", x);
 
   return 0;
