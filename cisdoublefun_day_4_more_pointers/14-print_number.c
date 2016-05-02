@@ -9,7 +9,7 @@ int print_char(char c)
 void print_number(int n)
 {
   /* first get the digits and how many digits */
-  int i, ncopy, print;
+  int i, ncopy;
 
   i = 1, ncopy = n;
   while (ncopy > 0)
@@ -25,5 +25,8 @@ void print_number(int n)
   {
     print = ncopy / 10;
     ncopy = ncopy - 10 * ncopy;
+    printf("%d\n", ncopy);
   }
+
+
 }

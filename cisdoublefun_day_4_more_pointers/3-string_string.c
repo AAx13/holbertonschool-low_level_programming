@@ -3,35 +3,14 @@ int string_length(char *s);
 
 char *string_string(const char *haystack, const char *needle)
 {
-  int i, j;
+  int i,
 
   i = 0;
-  j = string_length((char *)needle);
   while(haystack[i] != '\0')
   {
-    if(!haystack)
-    {
-      return 0;
-    }
-    if(haystack[i] == needle[j])
-    {
-      haystack[i] = needle[j];
-    }
-    i++;
+    if()
   }
-  return (char *)haystack;
-}
-
-int string_length(char *s)   /* length of a string */
-{
-  int i;
-
-  i = 0;
-  while(s[i] != '\0')
-  {
-    i++;
-  }
-  return i;
+  return
 }
 
 int main()
