@@ -19,7 +19,7 @@ char *string_string(const char *haystack, const char *needle)
     }
     i++;
   }
-  return haystack;
+  return (char *)haystack;
 }
 
 int string_length(char *s)   /* length of a string */
@@ -41,7 +41,7 @@ int main()
   const char small[] = "needle";
 
   x = string_string(big, small);
-  printf("found the [%s]\n", x);
+  printf("found the [%d]\n", x);
 
   return 0;
 }
