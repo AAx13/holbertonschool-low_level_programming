@@ -3,7 +3,7 @@ int strings_compare(char *s1, const char *s2);
 
 int main(void)
 {
-   char s1[] = "Hello";
+   char s1[] = "Hello ";
    char s2[] = "World!";
 
    printf("%d\n", strings_compare(s1, s2));
