@@ -30,5 +30,6 @@ char *string_dup(char *str)  /* this function will take a string and store it in
     x[i] = str[i];
     i++;
   }
+  x[i] = '\0';
   return x;
 }

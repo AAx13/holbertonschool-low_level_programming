@@ -6,7 +6,7 @@ int main()
 {
   char *s;
 
-  s = string_dup("Holberton");
+  s = string_dup("Holberton l         klj          092     kljl");
   printf("%s\n", s);
   free(s);
   return (0);
