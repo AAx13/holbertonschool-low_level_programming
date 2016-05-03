@@ -12,18 +12,18 @@ int string_length(char *s)
   return i;
 }
 
-char *string_concat(char *s1, char *s2)
+char *string_concat(char *s1, char *s2)   /* this function concatenates two strings */
 {
-  int j, i;
+  int i, j;
 
-  i = 0;
-  j = string_length(s1);
-  while()
+  j = 0;
+  i = string_length(s1);
+  while(s2[j] != '\0')
   {
-    s1[j] = s2[i];
+    s1[i] = s2[j];
     i++;
     j++;
-    printf("%s\n", s2);
   }
+  s1[i] = '\0';
   return s1;
 }
