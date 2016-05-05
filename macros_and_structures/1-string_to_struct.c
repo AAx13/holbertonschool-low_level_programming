@@ -2,6 +2,7 @@
 #include <stdlib.h>
 int str_length(char *str);
 
+/* this function stores a string and its length in a newly allocated structure, and return the address of this structure */
 struct String *string_to_struct(char *str)
 {
   struct String *ptrString;

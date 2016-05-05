@@ -8,6 +8,7 @@ int print_char(char c)
   return (write(1, &c, 1));
 }
 
+/* this function will print the content of struct String */
 void print_string_struct(struct String *str)
 {
   int i;
@@ -24,6 +25,7 @@ void print_string_struct(struct String *str)
   print_char('\n');
 }
 
+/* this function will print any number to console */
 void print_number(int n){
 
   int ncopy=n;
