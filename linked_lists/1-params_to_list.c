@@ -1,13 +1,16 @@
 #include <stdlib.h>
+#include "list.h"
+int str_length(char *str);
+
 
 List *params_to_list(int ac, char **av)
 {
-  List = *newPList;
+  
+}
+
+int str_length(char *str)
+{
   int i;
-  int len;
-  char *newString;
-
-  newPList = malloc(sizeof(List)); /* allocate memory to match the size of previous node */
-  for(i = 0; )
-
+  for(i = 0; str[i] != '\0'; i++);
+  return i;
 }
