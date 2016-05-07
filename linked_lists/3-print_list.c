@@ -1,7 +1,5 @@
 #include "list.h"
-#include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
 int str_length(char *str);
 int print_char(char c);
 
