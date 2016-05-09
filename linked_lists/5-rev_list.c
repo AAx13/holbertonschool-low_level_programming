@@ -1,18 +1,17 @@
 #include "list.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 void rev_list(List **list)
 {
-  List *first;
   List *prev = NULL;
-  List *next;
+  List *node = *list;
 
-  while(*list)
+  while(node != NULL)
   {
-    next = list->next;
-    list->next = prev;
+    node = node->next;
+    node->next = prev;
     prev = *list;
-    *list = next;
+    *list = node;
   }
-
 }
