@@ -6,7 +6,7 @@
 #include <stdio.h>
 #define BUFSIZE 512
 
-int main(int ac, char **av, __attribute__((unused))char **env)
+int main(int ac, char **av)
 {
   int n;
   int fd_in, fd_out;
