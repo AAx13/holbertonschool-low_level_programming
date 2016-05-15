@@ -1,25 +1,24 @@
 #include <unistd.h>
-#define BUFSIZE 1024
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+void print_string(char*);
 
 
 int arg_exec(char **av, char **env) {
 
   pid_t pid;
-  int i, j;
 
-  if(av[0] == NULL) {
-    return 0;
+  if((pid = fork()) == -1) {
+    print_string("Fork: Error");
+    return 1;
   }
-
-  if((pid == fork()) == -1) {
-    perror("fork");
-    return 0;
+  if(pid == 0) {
+    execve(av[0], av, env);
+  } else if(pid > 0) {
+    return 1;
   }
-
-  execve("/bin/ls", av, env);
-  /* string compare? */
-  /* string ncmp? */
-
-
-  return 1;
+  print_string("Damian$ ");
+  return 0;
 }
