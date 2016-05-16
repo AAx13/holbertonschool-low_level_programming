@@ -1,12 +1,14 @@
 #include <unistd.h>
 #include <stdio.h>
-#include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 void print_string(char*);
+void env_string(char **env);
 
 
-int arg_exec(char **av, char **env) {
+
+int arg_exec(char **av, char **env)
+{
 
   pid_t pid;
 
@@ -19,6 +21,6 @@ int arg_exec(char **av, char **env) {
   } else if(pid > 0) {
     return 1;
   }
-  print_string("Damian$ ");
+  print_string("SHELL$ ");
   return 0;
 }
