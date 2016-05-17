@@ -3,7 +3,7 @@ void print_string(char *str);
 void print_char(char c);
 
 
-void print_env(char **env)
+int print_env(int status, char **env)  /* this function will print all environment variables */
 {
   int i;
 
@@ -11,4 +11,5 @@ void print_env(char **env)
     print_string(env[i]);
     print_char('\n');
   }
+  return status;
 }
