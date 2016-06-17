@@ -6,7 +6,7 @@ int print_char(char c)
   return write(1, &c, 1);
 }
 
-void print_top_row(int n)
+void print_top_row(int n, int x)
 {
   int i;
 
@@ -62,6 +62,7 @@ int main(int argc, char **argv)
 {
 
   int i;
+  int j;
   i = atoi(argv[1]);
 
   if(argc != 2) {
@@ -75,15 +76,19 @@ int main(int argc, char **argv)
     return 0;
   }
 
-  print_top_row(i);
-  print_char('\n');
+
+  for(j = 0; j < i / 2; j++) {
+    print_top_row(i - j);
+    print_char('\n');
+  }
+
   if (i % 2 != 0) {
     print_middle_row(i);
     print_char('\n');
   }
+
   print_bottom_row(i);
   print_char('\n');
-
 
   return 0;
 }
