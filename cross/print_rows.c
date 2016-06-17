@@ -1,22 +1,31 @@
 int print_char(char c);
 
-int print_top_row(int n)
+/* this function will print the top half of the X */
+void print_top(int n)
 {
-  int i;
+  int i, x, begin, end;
 
-  for(i = 0; i < n; i++) {
-    if(i == 0) {
-      print_char(92);
-    } else if (i == n - 1) {
-      print_char(47);
-    } else {
-      print_char(' ');
+  begin = 0;
+  end = n - 1;
+
+  for(x = 0; x < n / 2; x++) {
+    for(i = 0; i < n; i++) {
+      if(i == begin) {
+        print_char('\\');
+      } else if(i == end) {
+        print_char('/');
+      } else {
+        print_char(' ');
+      }
     }
+    print_char('\n');
+    begin++;
+    end--;
   }
-  return 0;
 }
 
-int print_middle_row(int n)
+/* This function will print the middle row depending on user input */
+void print_middle(int n)
 {
   int i;
 
@@ -27,21 +36,33 @@ int print_middle_row(int n)
       print_char(' ');
     }
   }
-  return 0;
 }
 
-int print_bottom_row(int n)
+/* This function will print the bottom half of the X */
+void print_bottom(int n)
 {
-  int i;
+  int i, x, begin, end;
 
-  for(i = 0; i < n; i++) {
-    if(i == 0) {
-      print_char(47);
-    } else if (i == n - 1) {
-      print_char(92);
-    } else {
-      print_char(' ');
-    }
+  if(n % 2 != 0) {
+    begin = n / 2 - 1;
+    end = n / 2 + 1;
+  } else {
+    begin = n / 2 - 1;
+    end = n / 2;
   }
-  return 0;
+
+  for(x = 0; x < n / 2; x++) {
+    for(i = 0; i < n; i++) {
+      if(i == begin) {
+        print_char('/');
+      } else if(i == end) {
+        print_char('\\');
+      } else {
+        print_char(' ');
+      }
+    }
+    print_char('\n');
+    begin--;
+    end++;
+  }
 }
