@@ -1,4 +1,4 @@
-int print_char(char c);
+#include "cross_functions.h"
 
 /* this function will print the top half of the X */
 void print_top(int n)

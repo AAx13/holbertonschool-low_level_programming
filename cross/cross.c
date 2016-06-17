@@ -1,10 +1,6 @@
 #include <unistd.h>
 #include <stdlib.h>
-int print_char(char c);
-void print_string(char *);
-void print_middle(int);
-void print_top(int);
-void print_bottom(int);
+#include "cross_functions.h"
 
 /* This function will take a number from user input and print an X of that size */
 int main(int argc, char **argv)
@@ -12,7 +8,7 @@ int main(int argc, char **argv)
   int i;
 
   /* If no argument given correct user with Usage error */
-  if(argc == 1) {
+  if(argc != 2) {
     print_string("Usage: ./a.out <number to indicate size of cross>");
     print_char('\n');
     return 0;
