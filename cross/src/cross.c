@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <stdlib.h>
-#include "cross_functions.h"
+#include "inc/cross_functions.h"
 
 /* This function will take a number from user input and print an X of that size */
 int main(int argc, char **argv)
