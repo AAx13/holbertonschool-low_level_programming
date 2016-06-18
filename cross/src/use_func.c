@@ -6,12 +6,17 @@ int print_char(char c)
   return write(1, &c, 1);
 }
 
+/* This function returns the length of a string */
+int string_len(char *s)
+{
+  int i = 0;
+  while(s[i] != '\0')
+    i++;
+  return i;
+}
+
 /* This function will print a string by iterating through the string and printing character by character */
 void print_string(char *s)
 {
-  int i;
-
-  for(i = 0; s[i] != '\0'; i++) {
-    print_char(s[i]);
-  }
+  write(1, s, string_len(s));
 }
