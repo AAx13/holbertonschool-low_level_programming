@@ -16,4 +16,4 @@ clean:
 	rm -f $(OBJS)
 	rm -f $(TARGET)
 
-re: clean all				# The "re" rule ask for clean and build the executable once again.
+re: clean all	
