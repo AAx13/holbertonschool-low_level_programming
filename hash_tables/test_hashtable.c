@@ -4,8 +4,10 @@
 int print_hashtable(HashTable *ht);
 HashTable *ht_create(unsigned int size);
 int ht_put(HashTable *hashtable, const char *key, const char *value);
+char *ht_get(HashTable *hashtable, const char *key);
 
 int main(void) {
+        char *hash_value;
         HashTable *ht = ht_create(5);
         ht_put(ht, "One", "Value One");
         ht_put(ht, "Two", "Value Two");
@@ -16,7 +18,12 @@ int main(void) {
         ht_put(ht, "Seven", "Value Seven");
 
         print_hashtable(ht);
-
+        hash_value = ht_get(ht, "Seven");
+        printf("The current value at Key: [ %s ] is [ %s ]\n", "Seven", hash_value);
+        hash_value = ht_get(ht, "Three");
+        printf("The current value at Key: [ %s ] is [ %s ]\n", "Three", hash_value);
+        hash_value = ht_get(ht, "Eight");
+        printf("The current value at Key: [ %s ] is [ %s ]\n", "Eight", hash_value);
         return 0;
 }
 
