@@ -7,6 +7,7 @@ char *ht_get(HashTable *hashtable, const char *key)
         unsigned int index;
         unsigned int i;
         index = hash(key, hashtable->size);
+        printf("Current index is: %d", index);
         for(i = 0; i < hashtable->size; i++) {
                 for(list_ptr = hashtable->array[index]; list_ptr->key == key; list_ptr = list_ptr->next) {
                         return list_ptr->value;
