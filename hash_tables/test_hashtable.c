@@ -18,12 +18,12 @@ int main(void) {
         ht_put(ht, "Seven", "Value Seven");
 
         print_hashtable(ht);
-        hash_value = ht_get(ht, "Seven");
-        printf("The current value at Key: [ %s ] is [ %s ]\n", "Seven", hash_value);
+        hash_value = ht_get(ht, "Four");
+        printf("The current value at Key: [ %s ] is [ %s ]\n", "Four", hash_value);
         hash_value = ht_get(ht, "Three");
         printf("The current value at Key: [ %s ] is [ %s ]\n", "Three", hash_value);
-        hash_value = ht_get(ht, "Eight");
-        printf("The current value at Key: [ %s ] is [ %s ]\n", "Eight", hash_value);
+        hash_value = ht_get(ht, "Six");
+        printf("The current value at Key: [ %s ] is [ %s ]\n", "Six", hash_value);
         return 0;
 }
 

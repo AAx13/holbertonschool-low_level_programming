@@ -27,6 +27,6 @@ int ht_put(HashTable *hashtable, const char *key, const char *value)
         hashtable->array[index]->key = strdup(key);
         /* allocate memory for and duplicate the new value to the new nodes value */
         hashtable->array[index]->value = strdup(value);
-        
+
         return 0;
 }
