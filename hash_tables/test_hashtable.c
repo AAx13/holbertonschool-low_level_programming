@@ -1,10 +1,13 @@
 #include "hashtable.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 int print_hashtable(HashTable *ht);
 HashTable *ht_create(unsigned int size);
 int ht_put(HashTable *hashtable, const char *key, const char *value);
 char *ht_get(HashTable *hashtable, const char *key);
+void ht_free(HashTable *hashtable);
+
 
 int main(void) {
         char *hash_value;
@@ -20,10 +23,14 @@ int main(void) {
         print_hashtable(ht);
         hash_value = ht_get(ht, "Four");
         printf("The current value at Key: [ %s ] is [ %s ]\n", "Four", hash_value);
+        free(hash_value);
         hash_value = ht_get(ht, "Three");
         printf("The current value at Key: [ %s ] is [ %s ]\n", "Three", hash_value);
+        free(hash_value);
         hash_value = ht_get(ht, "Six");
         printf("The current value at Key: [ %s ] is [ %s ]\n", "Six", hash_value);
+        free(hash_value);
+        ht_free(ht);
         return 0;
 }
 
