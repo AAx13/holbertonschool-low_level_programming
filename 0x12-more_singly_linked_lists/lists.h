@@ -1,5 +1,6 @@
 #ifndef LISTS
 #define LISTS
+
 /**
  * struct listint_s - singly linked list
  * @n: integer
@@ -31,6 +32,5 @@ int _putchar(char c);
  * Return: The size of the linked list or node count.
  */
  size_t print_listint(const listint_t *h);
-
 
 #endif

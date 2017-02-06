@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
+
 /**
  * print_listint - function that prints the values of each node and
  * returns the number of elements in a linked listint_t list.
