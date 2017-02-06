@@ -11,8 +11,8 @@
  */
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 /**
@@ -31,6 +31,15 @@ int _putchar(char c);
  *
  * Return: The size of the linked list or node count.
  */
- size_t print_listint(const listint_t *h);
+size_t print_listint(const listint_t *h);
+
+ /**
+  * listint_len - function that returns the number of elements
+  * in a linked list.
+  * @h: The head node in the linked list.
+  *
+  * Return: The size of the linked list or node count.
+  */
+size_t listint_len(const listint_t *h);
 
 #endif
