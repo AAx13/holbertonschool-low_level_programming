@@ -51,4 +51,13 @@ size_t listint_len(const listint_t *h);
  */
 listint_t *add_nodeint(listint_t **head, const int n);
 
+/**
+ * add_nodeint_end - add a new node at the end of a listint_t list.
+ * @head: Current head node of type struct listint_t.
+ * @n: Value passed to store into the node.
+ *
+ * Return: The newly created node: listint_t of type struct.
+ */
+listint_t *add_nodeint_end(listint_t **head, const int n);
+
 #endif
