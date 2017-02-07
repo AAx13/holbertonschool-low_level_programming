@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * free_listint2 - free a list of type struct listint_t and set node to NULL.
