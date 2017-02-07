@@ -38,4 +38,7 @@ void free_listint(listint_t *head);
 /* free_listint2 - free a list of type struct listint_t, set node to NULL. */
 void free_listint2(listint_t **head);
 
+/* pop_listint - deletes the head node of a listint_t linked list. */
+int pop_listint(listint_t **head);
+
 #endif /* LISTS */
