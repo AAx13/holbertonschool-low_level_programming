@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * listint_len - function that returns the number of elements
+ * listint_len - function that returns the number of elements.
  * in a linked list.
  * @h: The head node in the linked list.
  *
