@@ -20,5 +20,6 @@ void free_listint2(listint_t **head)
 		free(cur_node);
 		cur_node = nex_node;
 	}
+
 	*head = NULL;
 }
