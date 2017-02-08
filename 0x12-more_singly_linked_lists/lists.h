@@ -50,7 +50,7 @@ int sum_listint(listint_t *head);
 /* insert_nodeint_at_index - inserts a new node at a given position (n). */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n);
 
-/* */
+/* delete_nodeint_at_index - deletes a node at index of a linked list. */
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 #endif /* LISTS */
