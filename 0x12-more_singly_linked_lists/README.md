@@ -86,7 +86,7 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n);
 
 ```
-*
+
 ```c
 /* delete_nodeint_at_index - deletes a node at index of a linked list. */
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
