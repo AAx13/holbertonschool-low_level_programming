@@ -1,6 +1,12 @@
 #include <stdlib.h>
 #include "lists.h"
 
+/**
+ * sum_listint - returns the sum of all the data (n) of a linked list.
+ * @head: Current head node of type struct listint_t.
+ *
+ * Return: sum of all data in linked list listint_t. If list empty return 0.
+ */
 int sum_listint(listint_t *head)
 {
 	listint_t *temp;
