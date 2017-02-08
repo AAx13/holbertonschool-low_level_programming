@@ -1,4 +1,4 @@
-# Singly Linked Lists Project
+# Singly Linked List Project
 
 ## Project Requirements
 * Allowed editors: vi, vim, emacs.
