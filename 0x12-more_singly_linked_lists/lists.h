@@ -47,4 +47,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 /* sum_listint - returns the sum of all the data (n) of a linked list. */
 int sum_listint(listint_t *head);
 
+/* insert_nodeint_at_index - inserts a new node at a given position (n). */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n);
+
+/* */
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
+
 #endif /* LISTS */
