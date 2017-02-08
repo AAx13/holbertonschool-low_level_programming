@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - inserts a new node at a given position (n).
+ * insert_nodeint_at_index - inserts a new node at a given position (index).
  * @head: Current head node of type struct listint_t.
  * @index: Desired Index to insert new node.
  * @n: Desired data to insert into new node (node->n).
