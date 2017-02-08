@@ -15,8 +15,6 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-int _putchar(char c);
-
 /*
  * print_listint - function that prints the values of each node and
  * returns the number of elements in a linked listint_t list.
@@ -54,3 +52,4 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 #endif /* LISTS */
+
