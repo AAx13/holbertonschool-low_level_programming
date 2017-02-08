@@ -16,18 +16,19 @@
 * All your header files should be include guarded.
 
 * Please use this data structure for this project:
-..*```c
-	/**
-	 * struct listint_s - singly linked list
-	 * @n: integer
-	 * @next: points to the next node
-	 *
-	 * Description: singly linked list node structure
-	 * for Holberton project
-	 */
-	 typedef struct listint_s
-	 {
-		int n;
-		struct listint_s *next;
-	 } listint_t;
-   ```
+
+```c
+/**
+* struct listint_s - singly linked list
+* @n: integer
+* @next: points to the next node
+*
+* Description: singly linked list node structure
+* for Holberton project
+*/
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+ } listint_t;
+ ```
