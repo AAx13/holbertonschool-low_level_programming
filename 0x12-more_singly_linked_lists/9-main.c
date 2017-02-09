@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n);
 
 /**
  * main - check the code for Holberton School students.
