@@ -22,26 +22,31 @@ int _printf(const char *format, ...)
 			len++;
 			switch (format[len])
 			{
-				case 'd': ui = va_arg(args, int);
+				case 'd':
+					ui = va_arg(args, int);
 					print_num(ui);
 					break;
 
-				case 'i' : ui = va_arg(args, int);
+				case 'i':
+					ui = va_arg(args, int);
 					print_num(ui);
 					break;
 
-				case 'c' : ui =  va_arg(args, int);
+				case 'c':
+					ui =  va_arg(args, int);
 					_putchar(ui);
 					break;
 
-				case 's' : str = va_arg(args, char *);
+				case 's':
+					str = va_arg(args, char *);
 					for (itr = 0; str[itr]; itr++)
 					{
 						_putchar(str[itr]);
 					}
 					break;
 
-				case '%' : _putchar('%');
+				case '%':
+					_putchar('%');
 					break;
 			}
 		}

@@ -4,6 +4,7 @@
 char *convert_base(unsigned int num, int base)
 {
 	char *newnum;
+
 	int long quot;
 	int long rem;
 	int i;
