@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 
 void print_num(int n)
