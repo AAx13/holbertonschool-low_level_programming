@@ -1,13 +1,15 @@
 #include "holberton.h"
+#include <stdio.h>
 
 int main(void)
 {
-	int i = 23456;
-	int x = -2345;
-	char c = 'W';
+	int len;
+	char c = 'H';
 	char *str = "HOLBERTON";
 
-	_printf("This is %s with %c and %i and %d\n", str, c, x, i);
-
+	_printf("This is %s with %c\n", str, c);
+	len = _printf("Percent:[%%] and [%%] and [%%]\n");
+	_printf("%d and %i\n", len, len);
+	printf("%d and %i\n", len, len);
 	return (0);
 }
