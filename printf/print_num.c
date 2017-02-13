@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * print_num - function to write numbers to stdout.
+ * @n: Contains the number passed to write to stdout.
+ *
+ * Return: Void.
+ */
 void print_num(int n)
 {
 	if (n < 0)

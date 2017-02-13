@@ -3,20 +3,13 @@
 
 /**
  * _printf - function that produces output according to a format.
- * @len: Stores length of output string.
- * @itr: Used to iterate through a string.
- * @count: Used to augment length of output string based on escaped '%' chars.
- * @str: Used to store argument of type char *.
- * @ui: Used to store argument of type int or unsigned int.
- * @args: Used as a pointer to arguments of type va_list passed to the function.
+ * @format: Contains all format parameters for a variable amount of arguments.
  *
  * Return: Number of characters printed (excluding null byte for strings).
  */
 int _printf(const char *format, ...)
 {
-	int len;
-	int itr;
-	int count;
+	int len, itr, count;
 	char *str;
 	unsigned int ui;
 	va_list args;
@@ -50,16 +43,6 @@ int _printf(const char *format, ...)
 				case '%':
 					count++;
 					_putchar('%');
-					break;
-
-				case 'd':
-					ui = va_arg(args, int);
-					print_num(ui);
-					break;
-
-				case 'i':
-					ui = va_arg(args, int);
-					print_num(ui);
 					break;
 			}
 		}
