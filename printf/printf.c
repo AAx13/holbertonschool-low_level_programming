@@ -9,9 +9,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int len, itr, count;
+	int len, ui, count;
 	char *str;
-	unsigned int ui;
 	va_list args;
 
 	count = 0;
@@ -34,10 +33,7 @@ int _printf(const char *format, ...)
 
 				case 's':
 					str = va_arg(args, char *);
-					for (itr = 0; str[itr]; itr++)
-					{
-						_putchar(str[itr]);
-					}
+					print_str(str);
 					break;
 
 				case '%':
