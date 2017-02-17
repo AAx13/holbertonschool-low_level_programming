@@ -46,4 +46,3 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 	}
 	return (NULL);
 }
-
