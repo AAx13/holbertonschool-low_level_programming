@@ -35,7 +35,7 @@ typedef struct listint_s
 ## Functions
 ```c
 /*
- * print_listint - function that prints the values of each node and
+ * [print_listint](../0x12-more_singly_linked_lists/0-print_listint.c) - function that prints the values of each node and
  * returns the number of elements in a linked listint_t list.
  */
 size_t print_listint(const listint_t *h);
