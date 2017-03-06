@@ -29,5 +29,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		new_ht->array[i] = NULL;
 	}
 
+	new_ht->size = size;
+
 	return (new_ht);
 }
