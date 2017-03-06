@@ -13,7 +13,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int i;
 
 	new_ht = malloc(sizeof(hash_table_t));
-	if(!new_ht)
+	if(!new_ht || size < 1)
 	{
 		return (NULL);
 	}
@@ -29,6 +29,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		new_ht->array[i] = NULL;
 	}
+
+	new_ht->size = size;
 
 	return (new_ht);
 }
