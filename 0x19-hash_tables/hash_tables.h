@@ -33,4 +33,10 @@ typedef struct hash_table_s
 /* hash_table_create - creates a hash table. */
 hash_table_t *hash_table_create(unsigned long int size);
 
+/* hash_dbj2 - Hash function implementing the djb2 algorithm. */
+unsigned long int hash_djb2(const unsigned char *str);
+
+/* key_index - Function to return the hash of a key.*/
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
 #endif /* HASH_TABLES */
