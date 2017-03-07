@@ -29,28 +29,22 @@ void hash_table_print(const hash_table_t *ht)
 		}
 	}
 
-	if (x != 0)
+
+	for (i = 0; i < x; i++)
 	{
-		for (i = 0; i < x; i++)
+		node = ht->array[buffer[i]];
+		if (i == 0)
 		{
-			node = ht->array[buffer[i]];
-			if (i == 0)
-			{
-				printf("{'%s': '%s', ", node->key, node->value);
-			}
-			else if (i == x - 1)
-			{
-				printf("'%s': '%s'}", node->key, node->value);
-			}
-			else
-			{
-				printf("'%s': '%s', ", node->key, node->value);
-			}
+			printf("{'%s': '%s', ", node->key, node->value);
 		}
-		printf("\n");
+		else if (i == x - 1)
+		{
+			printf("'%s': '%s'}", node->key, node->value);
+		}
+		else
+		{
+			printf("'%s': '%s', ", node->key, node->value);
+		}
 	}
-	else
-	{
-		printf("NULL\n");
-	}
+	printf("\n");
 }
