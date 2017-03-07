@@ -20,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	sentinel = 0;
 	new_node = malloc(sizeof(hash_node_t));
 	temp_node = malloc(sizeof(hash_node_t));
-	if (!new_node || !temp_node || !key || !value)
+	if (!new_node || !temp_node || !key)
 	{
 		return (0);
 	}
