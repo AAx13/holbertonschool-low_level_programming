@@ -35,15 +35,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp_node = temp_node->next;
 	}
 
-	temp_node = *(ht->array + index);
-	if (sentinel == 0 && ht->array[index])
+	if (sentinel == 0)
 	{
 		temp_node = ht->array[index];
-		temp_node->next = new_node;
-		new_node->next = NULL;
-	}
+		ht->array[index] = new_node;
+		new_node->next = temp_node;
+      	}
 
-	if (!temp_node)
+	if (!ht->array[index])
 	{
 		ht->array[index] = new_node;
 		new_node->next = NULL;
