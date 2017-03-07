@@ -9,43 +9,34 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i, first, last, len, sentinel;
+	unsigned long int i, x;
+	unsigned long int buffer[3000];
 	hash_node_t *node;
 
-	len = 0;
-	if (!ht)
-	{
-		printf("(nil)\n");
-	}
-	for (i = 0; i < ht->size; i++)
-	{
-		if (ht->array[i])
-		{
-			len++;
-		}
-	}
-	first = 1;
-	last = len;
-	sentinel = 0;
+	x = 0;
 	for (i = 0; i < ht->size; i++)
 	{
 		for (node = ht->array[i]; node; node = node->next)
 		{
-			sentinel++;
-			if (sentinel == first)
-			{
-				printf("{'%s': '%s', ", node->key, node->value);
-			}
-			else if (sentinel == last)
-			{
-				printf("'%s': '%s'}\n", node->key, node->value);
-			}
-			else
-			{
-				printf(" '%s': '%s', ", node->key, node->value);
-			}
+			buffer[x] = key_index((const unsigned char *)node->key, ht->size);
+			x++;
 		}
 	}
 
-
+	for (i = 0; i < x; i++)
+	{
+		node = ht->array[buffer[i]];
+		if (i == 0)
+		{
+			printf("{'%s': '%s', ", node->key, node->value);
+		}
+		else if (i == x - 1)
+		{
+			printf("'%s': '%s'}\n", node->key, node->value);
+		}
+		else
+		{
+			printf("'%s': '%s', ", node->key, node->value);
+		}
+	}
 }
