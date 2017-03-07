@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <limits.h>
+#include <stdlib.h>
 #include "hash_tables.h"
 
 /**
@@ -11,11 +11,17 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i, x;
-	unsigned long int buffer[5000];
+	unsigned long int *buffer;
 	hash_node_t *node;
 
 	x = 0;
 	if (!ht)
+	{
+		return;
+	}
+
+	buffer = malloc(sizeof(int) * ht->size);
+	if (!buffer)
 	{
 		return;
 	}
