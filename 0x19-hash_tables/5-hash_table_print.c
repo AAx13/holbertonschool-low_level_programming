@@ -27,11 +27,11 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < x; i++)
 	{
 		node = ht->array[buffer[i]];
-		if (i == 0 || buffer[i] == buffer[i + 1])
+		if (i == 0)
 		{
 			printf("{'%s': '%s', ", node->key, node->value);
 		}
-		else if (i == x - 1 || buffer[i] == buffer[i - 1])
+		else if (i == x - 1)
 		{
 			printf("'%s': '%s'}", node->key, node->value);
 		}
