@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "hash_tables.h"
 
 /**
@@ -14,6 +13,10 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *node;
 
 	len = 0;
+	if (!ht)
+	{
+		printf("(nil)\n");
+	}
 	for (i = 0; i < ht->size; i++)
 	{
 		if (ht->array[i])
@@ -21,7 +24,6 @@ void hash_table_print(const hash_table_t *ht)
 			len++;
 		}
 	}
-
 	first = 1;
 	last = len;
 	sentinel = 0;
@@ -34,7 +36,7 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				printf("{'%s': '%s', ", node->key, node->value);
 			}
-			else if(sentinel == last)
+			else if (sentinel == last)
 			{
 				printf("'%s': '%s'}\n", node->key, node->value);
 			}
