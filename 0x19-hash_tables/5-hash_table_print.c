@@ -19,8 +19,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		for (node = ht->array[i]; node; node = node->next)
 		{
-			buffer[x] = key_index((const unsigned char *)
-					      node->key, ht->size);
+			buffer[x] = key_index((const unsigned char *)node->key, ht->size);
 			x++;
 		}
 	}
@@ -28,11 +27,11 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < x; i++)
 	{
 		node = ht->array[buffer[i]];
-		if (i == 0)
+		if (i == 0 || buffer[i] == buffer[i + 1])
 		{
 			printf("{'%s': '%s', ", node->key, node->value);
 		}
-		else if (i == x - 1)
+		else if (i == x - 1 || buffer[i] == buffer[i - 1])
 		{
 			printf("'%s': '%s'}", node->key, node->value);
 		}
