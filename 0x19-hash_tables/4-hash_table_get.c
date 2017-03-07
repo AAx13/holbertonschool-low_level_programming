@@ -14,14 +14,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *node;
 	unsigned long int index;
 
-	node = malloc(sizeof(hash_node_t));
-	index = key_index((const unsigned char *)key, ht->size);
-
-	if (!node || !ht || !key)
+	if (!ht || !key)
 	{
 		return (NULL);
 	}
-
+	index = key_index((const unsigned char *)key, ht->size);
 	node = ht->array[index];
 
 	while (node)
