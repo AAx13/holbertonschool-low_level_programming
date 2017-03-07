@@ -13,21 +13,19 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int sentinel;
-	hash_node_t *new_node;
-	hash_node_t *temp_node;
+	hash_node_t *new_node, *temp_node;
 	unsigned long int index;
 
 	sentinel = 0;
 	new_node = malloc(sizeof(hash_node_t));
-	temp_node = malloc(sizeof(hash_node_t));
-	if (!new_node || !temp_node || !key)
+	if (!new_node || !key)
 	{
 		return (0);
 	}
 	index = key_index((const unsigned char *)key, ht->size);
 	if (ht->array[index] != NULL)
 	{
-		temp_node = ht->array[index];
+		temp_node = *(ht->array + index);
 		while (temp_node)
 		{
 			if (strcmp(key, temp_node->key) == 0)
