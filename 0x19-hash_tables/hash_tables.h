@@ -42,6 +42,9 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /* hash_table_set - Adds an element to the hash table. */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
+/* hash_table_get - function that retrieves a value associated with a key. */
+char *hash_table_get(const hash_table_t *ht, const char *key);
+
 /* hash_table_print - Prints a hash table. */
 void hash_table_print(const hash_table_t *ht);
 
