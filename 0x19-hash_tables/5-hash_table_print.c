@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 #include "hash_tables.h"
 
 /**
@@ -10,7 +11,7 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i, x;
-	unsigned long int buffer[3000];
+	unsigned long int buffer[5000];
 	hash_node_t *node;
 
 	x = 0;
@@ -26,17 +27,18 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < x; i++)
 	{
 		node = ht->array[buffer[i]];
-		if (i == 0)
+		if (i == 0 || buffer[i] == buffer[i + 1])
 		{
 			printf("{'%s': '%s', ", node->key, node->value);
 		}
-		else if (i == x - 1)
+		else if (i == x - 1 || buffer[i] == buffer[i - 1])
 		{
-			printf("'%s': '%s'}\n", node->key, node->value);
+			printf("'%s': '%s'}", node->key, node->value);
 		}
 		else
 		{
-			printf("'%s': '%s', ", node->key, node->value);
+			printf(" '%s': '%s',", node->key, node->value);
 		}
 	}
+	printf("\n");
 }
