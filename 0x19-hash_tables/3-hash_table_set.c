@@ -23,26 +23,26 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	index = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[index] != NULL)
+
+	temp_node = *(ht->array + index);
+	while (temp_node)
 	{
-		temp_node = *(ht->array + index);
-		while (temp_node)
+		if (strcmp(key, temp_node->key) == 0)
 		{
-			if (strcmp(key, temp_node->key) == 0)
-			{
-				temp_node->value = strdup(value);
-				sentinel++;
-			}
-			temp_node = temp_node->next;
+			temp_node->value = strdup(value);
+			sentinel++;
 		}
-		if (sentinel == 0)
-		{
-			temp_node = ht->array[index];
-			ht->array[index] = new_node;
-			new_node->next = temp_node;
-		}
+		temp_node = temp_node->next;
 	}
-	else
+
+	if (sentinel == 0)
+	{
+		temp_node = ht->array[index];
+		ht->array[index] = new_node;
+		new_node->next = temp_node;
+	}
+
+	if (!ht->array[index])
 	{
 		ht->array[index] = new_node;
 		new_node->next = NULL;
