@@ -3,6 +3,34 @@
 #include "hash_tables.h"
 
 /**
+ * print_list - Prints list containing more than one node.
+ * @ht: A hash table.
+ * @buffer: Buffer contains keys from all elements in the array.
+ * @x: Length of the buffer.
+ *
+ * Return: Void.
+ */
+void print_list(const hash_table_t *ht, unsigned long int *buffer,
+		unsigned long int x)
+{
+	unsigned long int i;
+	hash_node_t *node;
+
+	for (i = 0; i < x; i++)
+	{
+		node = ht->array[buffer[i]];
+		if (node->next)
+		{
+			while (node)
+			{
+				printf(", '%s': '%s'", node->key, node->value);
+				node = node->next;
+			}
+		}
+	}
+}
+
+/**
  * print_array - Prints array containing only one node.
  * @ht: A hash table.
  * @buffer: Buffer contains keys from all elements in the array.
@@ -31,33 +59,9 @@ void print_array(const hash_table_t *ht, unsigned long int *buffer,
 				printf(", '%s': '%s'", node->key, node->value);
 			}
 		}
-	}
-}
-
-/**
- * print_list - Prints list containing more than one node.
- * @ht: A hash table.
- * @buffer: Buffer contains keys from all elements in the array.
- * @x: Length of the buffer.
- *
- * Return: Void.
- */
-void print_list(const hash_table_t *ht, unsigned long int *buffer,
-		unsigned long int x)
-{
-	unsigned long int i;
-	hash_node_t *node;
-
-	for (i = 0; i < x; i++)
-	{
-		node = ht->array[buffer[i]];
-		if (node->next)
+		else
 		{
-			while (node)
-			{
-				printf(", '%s': '%s'", node->key, node->value);
-				node = node->next;
-			}
+			print_list(ht, buffer, x);
 		}
 	}
 	printf("}\n");
@@ -100,5 +104,4 @@ void hash_table_print(const hash_table_t *ht)
 		}
 	}
 	print_array(ht, buffer, x);
-	print_list(ht, buffer, x);
 }
