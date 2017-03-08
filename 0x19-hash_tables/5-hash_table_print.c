@@ -48,7 +48,7 @@ void hash_table_print(const hash_table_t *ht)
 			for (node = ht->array[buffer[i]], node = node->next;
 			     node; node = node->next)
 			{
-				printf("'%s' : '%s', ", node->key, node->value);
+				printf("'%s': '%s', ", node->key, node->value);
 			}
 		}
 		else if (i > 0 && i < (x - 1))
