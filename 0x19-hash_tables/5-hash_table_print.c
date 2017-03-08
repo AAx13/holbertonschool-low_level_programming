@@ -25,7 +25,8 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		for (node = ht->array[i]; node; node = node->next)
 		{
-			buffer[x] = key_index((const unsigned char *)node->key, ht->size);
+			buffer[x] = key_index(
+				(const unsigned char *)node->key, ht->size);
 			x++;
 		}
 	}
