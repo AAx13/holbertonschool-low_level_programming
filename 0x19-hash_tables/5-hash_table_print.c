@@ -16,6 +16,7 @@ void print_array(const hash_table_t *ht, unsigned long int *buffer,
 	unsigned long int i;
 	hash_node_t *node;
 
+	printf("{");
 	for (i = 0; i < x; i++)
 	{
 		node = ht->array[buffer[i]];
@@ -23,7 +24,7 @@ void print_array(const hash_table_t *ht, unsigned long int *buffer,
 		{
 			if (i == 0)
 			{
-				printf("{'%s': '%s'", node->key, node->value);
+				printf("'%s': '%s'", node->key, node->value);
 			}
 			else
 			{
@@ -46,11 +47,6 @@ void print_list(const hash_table_t *ht, unsigned long int *buffer,
 {
 	unsigned long int i;
 	hash_node_t *node;
-
-	if (!x)
-	{
-		return;
-	}
 
 	for (i = 0; i < x; i++)
 	{
