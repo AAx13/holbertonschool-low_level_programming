@@ -81,7 +81,7 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *node;
 
 	x = 0;
-	if (!ht)
+	if (!ht || !ht->array)
 	{
 		return;
 	}
