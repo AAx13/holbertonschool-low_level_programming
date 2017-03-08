@@ -31,7 +31,7 @@ void print_list(const hash_table_t *ht, unsigned long int *buffer,
 }
 
 /**
- * print_array - Prints array containing only one node.
+ * print_array - Prints array of nodes.
  * @ht: A hash table.
  * @buffer: Buffer contains keys from all elements in the array.
  * @x: Length of the buffer.
@@ -61,6 +61,7 @@ void print_array(const hash_table_t *ht, unsigned long int *buffer,
 		}
 		else
 		{
+			/* if there is more than one node */
 			print_list(ht, buffer, x);
 		}
 	}
