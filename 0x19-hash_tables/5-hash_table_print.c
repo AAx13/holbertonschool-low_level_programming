@@ -75,17 +75,12 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *node;
 
 	x = 0;
-	if (!ht)
+	if (!ht || !ht->array)
 	{
 		return;
 	}
 
 	buffer = malloc(sizeof(int) * ht->size);
-	if (!buffer)
-	{
-		return;
-	}
-
 	for (i = 0; i < ht->size; i++)
 	{
 		for (node = ht->array[i]; node; node = node->next)
