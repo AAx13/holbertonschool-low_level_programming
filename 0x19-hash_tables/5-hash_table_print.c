@@ -47,6 +47,11 @@ void print_list(const hash_table_t *ht, unsigned long int *buffer,
 	unsigned long int i;
 	hash_node_t *node;
 
+	if (!x)
+	{
+		return;
+	}
+
 	for (i = 0; i < x; i++)
 	{
 		node = ht->array[buffer[i]];
@@ -75,7 +80,7 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *node;
 
 	x = 0;
-	if (!ht || !ht->array)
+	if (!ht)
 	{
 		return;
 	}
