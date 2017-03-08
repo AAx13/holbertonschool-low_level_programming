@@ -103,5 +103,10 @@ void hash_table_print(const hash_table_t *ht)
 			x++;
 		}
 	}
+
+	if (x == 0)
+	{
+		return;
+	}
 	print_array(ht, buffer, x);
 }
