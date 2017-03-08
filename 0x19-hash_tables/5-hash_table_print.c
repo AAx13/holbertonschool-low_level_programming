@@ -27,31 +27,41 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			buffer[x] = key_index(
 				(const unsigned char *)node->key, ht->size);
+			if (buffer[x] == buffer[x - 1])
+			{
+				break;
+			}
 			x++;
 		}
 	}
 
+	for (i = 0; i < x; i++)
+	{
+		node = ht->array[buffer[i]];
+		if (!node->next)
+		{
+			if (i == 0)
+			{
+				printf("{'%s': '%s'", node->key, node->value);
+			}
+			else
+			{
+				printf(", '%s': '%s'", node->key, node->value);
+			}
+		}
+	}
 
 	for (i = 0; i < x; i++)
 	{
 		node = ht->array[buffer[i]];
-		if (i == 0)
+		if (node->next)
 		{
-			printf("{'%s': '%s', ", node->key, node->value);
-		}
-		else if (i == x - 1)
-		{
-			printf("'%s': '%s'}", node->key, node->value);
-		}
-		else if (buffer[i] == buffer[i - 1])
-		{
-			node = node->next;;
-			printf("'%s': '%s', ", node->key, node->value);
-		}
-		else
-		{
-			printf("'%s': '%s', ", node->key, node->value);
+			while (node)
+			{
+				printf(", '%s': '%s'", node->key, node->value);
+				node = node->next;
+			}
 		}
 	}
-	printf("\n");
+	printf("}\n");
 }
