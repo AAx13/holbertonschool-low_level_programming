@@ -93,14 +93,11 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			buffer[x] = key_index(
 				(const unsigned char *)node->key, ht->size);
-			if (!buffer[x])
-			{
-				return;
-			}
 			if (buffer[x] == buffer[x - 1])
 			{
 				break;
 			}
+			printf("%lu\n", buffer[x]);
 			x++;
 		}
 	}
