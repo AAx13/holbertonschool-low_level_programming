@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include "hash_tables.h"
 
@@ -12,7 +13,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int sentinel;
+	unsigned int sentinel;
 	hash_node_t *new_node, *tmp_node;
 	unsigned long int index;
 
@@ -28,9 +29,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(key, tmp_node->key) == 0)
 		{
-			*(tmp_node->value) = *value;
+			/* fix this mem leak */
+			tmp_node->value = strdup(value);
 			sentinel++;
 			free(new_node);
+			return (1);
 		}
 	}
 
