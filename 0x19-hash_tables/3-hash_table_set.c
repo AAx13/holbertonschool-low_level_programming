@@ -31,7 +31,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			*(tmp_node->value) = *value;
 			sentinel++;
 			free(new_node);
-			return (1);
 		}
 	}
 
