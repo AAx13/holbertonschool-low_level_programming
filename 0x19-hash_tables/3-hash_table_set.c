@@ -28,8 +28,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(key, tmp_node->key) == 0)
 		{
-			tmp_node->value = strdup(value);
+			*(tmp_node->value) = *value;
 			sentinel++;
+			free(new_node);
+			return (1);
 		}
 	}
 

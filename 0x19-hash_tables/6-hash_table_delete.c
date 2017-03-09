@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "hash_tables.h"
 
 /**
@@ -29,7 +28,6 @@ void hash_table_delete(hash_table_t *ht)
 			free(tmp_node->value);
 			free(tmp_node);
 		}
-		ht->array[i] = NULL;
 	}
 	free(ht->array);
 	free(ht);
