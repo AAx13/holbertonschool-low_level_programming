@@ -37,7 +37,7 @@
 
 [hash_table_create](../0x19-hash_tables/0-hash_table_create.c)
 ```c
-/* hash_table_create - creates a hash table. */
+/* hash_table_create - Creates a hash table. */
 hash_table_t *hash_table_create(unsigned long int size);
 ```
 
@@ -61,7 +61,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
 [hash_table_get](../0x19-hash_tables/4-hash_table_get.c)
 ```c
-/* hash_table_get - function that retrieves a value associated with a key. */
+/* hash_table_get - Function that retrieves a value associated with a key. */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 ```
 
