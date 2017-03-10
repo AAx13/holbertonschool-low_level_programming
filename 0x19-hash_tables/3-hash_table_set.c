@@ -29,7 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(key, tmp_node->key) == 0)
 		{
-			/* fix this mem leak */
+			free(tmp_node->value);
 			tmp_node->value = strdup(value);
 			sentinel++;
 			free(new_node);
