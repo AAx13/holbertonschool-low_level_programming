@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	sentinel = 0;
 	new_node = malloc(sizeof(hash_node_t));
-	if (!new_node || !key || !ht || !value)
+	if (!new_node || !key || !ht)
 	{
 		return (0);
 	}
@@ -49,7 +49,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 		new_node->next = NULL;
 	}
-
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 
