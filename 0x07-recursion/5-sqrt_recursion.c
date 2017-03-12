@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _sqrt_iterate - returns the natural square root of a number.
+ * sqrt_iterate - returns the natural square root of a number.
  * @n: A number.
  * @i: Number that iterates till square root is met.
  *
@@ -9,7 +9,7 @@
  */
 int sqrt_iterate(int n, int i)
 {
-	if (n < 1 || i > n / 2)
+	if (n < 1)
 	{
 		return (-1);
 	}
