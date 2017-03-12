@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * _sqrt_iterate - returns the natural square root of a number.
+ * @n: A number.
+ * @i: Number that iterates till square root is met.
+ *
+ * Return: Square root of a number (int).
+ */
 int sqrt_iterate(int n, int i)
 {
 	if (n < 1 || i > n / 2)
@@ -20,6 +27,12 @@ int sqrt_iterate(int n, int i)
 	return (sqrt_iterate(n, i + 1));
 }
 
+/**
+ * _sqrt_recursion - returns the natural square root of a number.
+ * @n: A number.
+ *
+ * Return: Square root of a number (int).
+ */
 int _sqrt_recursion(int n)
 {
 	int i;
