@@ -39,7 +39,7 @@ int palindrome_iter(char *s, int i)
 }
 
 /**
- * palindrome_iter - returns 1 if a string is a palindrome and 0 if not.
+ * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
  * @s: A string.
  *
  * Return: 1 if a string is a palindrome and 0 if not.
