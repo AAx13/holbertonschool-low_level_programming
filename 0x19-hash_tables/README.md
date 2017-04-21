@@ -76,3 +76,24 @@ void hash_table_print(const hash_table_t *ht);
 /* hash_table_delete - Deletes a hash table.*/
 void hash_table_delete(hash_table_t *ht);
 ```
+
+[sorted_hash_table](../0x19-hash_tables/100-sorted_hash_table.c)
+```c
+/* shash_table_sort - sorts the sorted linked list alphabetically. */
+void shash_table_sort(shash_table_t *ht, shash_node_t *new, shash_node_t *tmp);
+
+/* hash_table_set - Adds an element to the hash table. */
+int shash_table_set(shash_table_t *ht, const char *key, const char *value);
+
+/* hash_table_print - Prints a sorted linked list. */
+void shash_table_print(const shash_table_t *ht);
+
+/* hash_table_get - Function that retrieves a value associated with a key. */
+char *shash_table_get(const shash_table_t *ht, const char *key);
+
+/* hash_table_print_rev - Prints a sorted linked list in reverse order. */
+void shash_table_print_rev(const shash_table_t *ht);
+
+/* hash_table_delete - Deletes a  hash table. */
+void shash_table_delete(shash_table_t *ht);
+```
