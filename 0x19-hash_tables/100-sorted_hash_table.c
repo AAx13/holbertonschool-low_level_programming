@@ -4,7 +4,7 @@
 #include "hash_tables.h"
 
 /**
- * shash_table_delete - Deletes a  hash table.
+ * shash_table_delete - Deletes a hash table.
  * @ht: A hash table.
  *
  * Return: Void.
@@ -157,21 +157,21 @@ void shash_table_sort(shash_table_t *ht, shash_node_t *new, shash_node_t *tmp)
 		{
 			tmp = tmp->snext;
 		}
-		if (tmp == ht->shead) /* first node */
+		if (tmp == ht->shead && ht->stail != tmp)
 		{
 			ht->shead = new;
 			new->snext = tmp;
 			new->sprev = NULL;
 			tmp->sprev = new;
 		}
-		else if (tmp->snext == NULL) /* last node */
+		else if (!tmp->snext && strcmp(new->key, tmp->key) > 0)
 		{
 			tmp->snext = new;
 			new->sprev = tmp;
 			new->snext = NULL;
 			ht->stail = new;
 		}
-		else /* all other nodes */
+		else
 		{
 			pre = tmp->sprev;
 			pre->snext = new;
@@ -198,7 +198,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	sentinel = 0;
 	new_node = malloc(sizeof(shash_node_t));
-	if (!new_node || !key || !ht)
+	if (!new_node || !key || !ht || !value)
 	{
 		return (0);
 	}
