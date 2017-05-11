@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -20,16 +21,16 @@ int wildcmp(char *s1, char *s2)
 			{
 				return (wildcmp(s1 + 1, s2 + 1));
 			}
-			/* use the '*' to skip to next matching char */
+			/* use the '*' to skip to next matching char or ignore*/
 			if (*(s1 + 1) != *(s2 + 1))
 			{
 				/* skip through s1 */
-				if (*(s2 + 1) != '*')
+				if (*(s2 + 1) != '*' && *(s1 + 1) != '\0')
 				{
 					return (wildcmp(s1 + 1, s2));
 				}
 				/* skip through s2 */
-				if (*(s2 + 1) == '*')
+				if (*(s2 + 1) == '*' || *(s2 + 1) == *s1)
 				{
 					return (wildcmp(s1, s2 + 1));
 				}
