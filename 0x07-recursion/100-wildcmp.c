@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * wildcmp - compares two strings.
@@ -21,20 +21,21 @@ int wildcmp(char *s1, char *s2)
 			{
 				return (wildcmp(s1 + 1, s2 + 1));
 			}
-			/* use the '*' to skip to next matching char or ignore*/
-			if (*(s1 + 1) != *(s2 + 1))
+			/* use the '*' to skip to next matching char */
+			if (*(s1 + 1) != *(s2 + 1) && *(s1 + 1) != '\0')
 			{
 				/* skip through s1 */
-				if (*(s2 + 1) != '*' && *(s1 + 1) != '\0')
+				if (*(s2 + 1) != '*')
 				{
 					return (wildcmp(s1 + 1, s2));
 				}
 				/* skip through s2 */
-				if (*(s2 + 1) == '*' || *(s2 + 1) == *s1)
+				if (*(s2 + 1) == '*')
 				{
 					return (wildcmp(s1, s2 + 1));
 				}
 			}
+			return (1);
 		}
 		/* is s2 not a '*' (they dont match) */
 		return (0);
@@ -44,10 +45,9 @@ int wildcmp(char *s1, char *s2)
 	{
 		/* are we at the end of either strings */
 		if (*s1 == '\0' || *s2 == '\0')
-		{
 			return (1);
-		}
+
 		return (wildcmp(s1 + 1, s2 + 1));
 	}
-	return (00100);
+	return (11);
 }
